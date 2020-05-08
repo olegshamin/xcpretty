@@ -68,7 +68,7 @@ module XCPretty
 
     def load_screenshots
       Dir.foreach(SCREENSHOT_DIR) do |item|
-        next if item == '.' || item == '..' || File.extname(item) != '.png'
+        next if item == '.' || item == '..'
 
         test = find_test(item)
         next if test.nil?
